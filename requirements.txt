@@ -1,0 +1,46 @@
+# ══════════════════════════════════════════════════════════════════
+# SYNTDOCS — requirements.txt
+# ══════════════════════════════════════════════════════════════════
+#
+# Installation complète :
+#   pip install -r requirements.txt
+#
+# Installation minimale Raspberry Pi Zero (uniquement agent RPi) :
+#   pip install aiohttp aiofiles msgpack --no-deps
+#
+# Installation serveur (NEXUS) :
+#   pip install fastapi uvicorn msgpack python-multipart aiofiles
+#
+# Installation Redstone Schematic :
+#   pip install nbtlib numpy
+
+# ── Serveur NEXUS ──
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.9
+
+# ── Communication agents ──
+aiohttp>=3.9.0
+aiofiles>=23.2.0
+msgpack>=1.0.7
+
+# ── Analyse documentaire ──
+# (optionnels — les agents fonctionnent sans eux)
+# pip install these for enhanced NLP:
+# spacy>=3.7.0
+# nltk>=3.8.0
+
+# ── Export documents ──
+# python-docx>=1.1.0      # Export DOCX
+# openpyxl>=3.1.2         # Export XLSX
+# reportlab>=4.1.0        # Export PDF
+# python-pptx>=0.6.23     # Export PPTX (VISIO)
+# weasyprint>=61.0        # HTML → PDF
+# ebooklib>=0.18          # Export EPUB
+
+# ── Redstone Schematic ──
+nbtlib>=2.0.4
+numpy>=1.26.0
+
+# ── Utilitaires ──
+python-dotenv>=1.0.0
